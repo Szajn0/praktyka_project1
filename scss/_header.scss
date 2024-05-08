@@ -1,10 +1,24 @@
 header{
     background: url('../assets/img/bg-header.webp') center/cover fixed;
     height: 100vh;
-}  
-
-h1{
-    margin: 0;
     color: #fff;
-    text-align: center;
-} 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1{
+        font-size: 2rem;
+        text-align: center;
+        line-height: 2.4rem;
+
+        @media screen and (min-width: 680px) {
+            font-size: 4rem;
+            line-height: 4.4rem;
+        }
+        @media screen and (min-width: 1100px) {
+            font-size: 5.5rem;
+            line-height: 5.9rem;
+        }
+    }
+}  
