@@ -1,6 +1,16 @@
 @use 'variables' as*;
 @use 'mixins' as *;
 
+@keyframes show-header-box {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
 header {
     background: url('../assets/img/bg-header.webp') center/cover fixed;
     height: 100vh;
@@ -16,6 +26,7 @@ header {
         display: flex;
         flex-direction: column;
         padding: 20px;
+        animation: show-header-box 2.7s linear;
 
         @include md-screen {
             padding: 50px;
@@ -24,6 +35,38 @@ header {
         @include lg-screen {
             padding: 80px;
         }
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+
+        @include md-screen {
+            font-size: 4rem;
+            line-height: 4.5rem;
+            margin-bottom: 20px;
+        }
+
+        @include lg-screen {
+            font-size: 7rem;
+            line-height: 7.5rem;
+            margin-bottom: 25px;
+        }
+
+        // text-align: center;
+        line-height: 2.4rem;
+        z-index: 1;
+
+
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        background-color: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
     }
 
     p {
@@ -69,35 +112,4 @@ header {
         }
     }
 
-    h1 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-
-        @include md-screen {
-            font-size: 4rem;
-            line-height: 4.5rem;
-            margin-bottom: 20px;
-        }
-
-        @include lg-screen {
-            font-size: 7rem;
-            line-height: 7.5rem;
-            margin-bottom: 25px;
-        }
-
-        // text-align: center;
-        line-height: 2.4rem;
-        z-index: 1;
-
-
-    }
-
-    &::after {
-        content: '';
-        display: block;
-        background-color: rgba(0, 0, 0, .5);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
 }

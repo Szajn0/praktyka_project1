@@ -54,6 +54,43 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #730217;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  color: #D6C5A9;
+  padding: 10px;
+}
+
+.logo {
+  padding-left: 20px;
+  flex-basis: 70%;
+  font-size: 2rem;
+}
+
+.menu {
+  flex-basis: 30%;
+  text-align: right;
+  padding-right: 30px;
+}
+
+nav .material-icons {
+  color: inherit;
+  font-size: 3rem;
+  text-align: right;
+}
+
+@keyframes show-header-box {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100;
+  }
+}
 header {
   background: url("../assets/img/bg-header.webp") center/cover fixed;
   height: 100vh;
@@ -66,6 +103,7 @@ header .header-box {
   display: flex;
   flex-direction: column;
   padding: 20px;
+  animation: show-header-box 2.7s linear;
 }
 @media screen and (min-width: 680px) {
   header .header-box {
@@ -76,6 +114,34 @@ header .header-box {
   header .header-box {
     padding: 80px;
   }
+}
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  line-height: 2.4rem;
+  z-index: 1;
+}
+@media screen and (min-width: 680px) {
+  header h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  header h1 {
+    font-size: 7rem;
+    line-height: 7.5rem;
+    margin-bottom: 25px;
+  }
+}
+header::after {
+  content: "";
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 header p {
   margin-bottom: 40px;
@@ -116,33 +182,9 @@ header a:hover {
   transform: translateX(20px);
   scale: 1.2;
 }
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-  line-height: 2.4rem;
-  z-index: 1;
-}
-@media screen and (min-width: 680px) {
-  header h1 {
-    font-size: 4rem;
-    line-height: 4.5rem;
-    margin-bottom: 20px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  header h1 {
-    font-size: 7rem;
-    line-height: 7.5rem;
-    margin-bottom: 25px;
-  }
-}
-header::after {
-  content: "";
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 100%;
-  height: 100%;
-  position: absolute;
+
+footer {
+  color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
