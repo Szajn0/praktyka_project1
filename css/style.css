@@ -81,6 +81,7 @@ nav .material-icons {
   color: inherit;
   font-size: 3rem;
   text-align: right;
+  cursor: pointer;
 }
 
 @keyframes show-header-box {
