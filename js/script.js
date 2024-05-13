@@ -17,3 +17,11 @@ closeMenu.addEventListener('click', () => {
     menuDiv.classList.remove('showMenu');
 
 });
+
+const linkMenu = document.querySelectorAll('.navigation a');
+
+linkMenu.forEach(elem =>{
+    elem.addEventListener('click', () => {
+        menuDiv.classList.remove('showMenu');
+    });
+}); 
