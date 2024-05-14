@@ -26,7 +26,7 @@
 nav {
     display: flex;
     align-items: center;
-    background-color: $color1;
+    background-color: $color6;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -74,7 +74,7 @@ nav .material-icons {
         width: 25%;
     }
 
-    background-color: $color8;
+    background-color: $color6;
     animation: hide-menu-action 0.5s;
     color: $color5;
 
@@ -82,8 +82,9 @@ nav .material-icons {
         color: $color5;
         font-size: 3rem;
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: 10px;
+        cursor: pointer;
     }
 
     ul{
@@ -110,7 +111,7 @@ nav .material-icons {
         font-size: 1.6rem;
 
         &:hover{
-            background-color: $color1;
+            background-color: $color8;
             color: $color5;
         }
     }
