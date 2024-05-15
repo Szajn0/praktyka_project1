@@ -102,6 +102,11 @@ a {
   }
 }
 @media screen and (min-width: 680px) {
+  .col-md33 {
+    flex: 0 0 33.333333%;
+  }
+}
+@media screen and (min-width: 680px) {
   .col-md50 {
     flex: 0 0 50%;
   }
@@ -331,6 +336,9 @@ section {
   min-height: 100vh;
   padding-top: 120px;
 }
+section:nth-of-type(even) {
+  background-color: whitesmoke;
+}
 section h2 {
   text-align: center;
   font-size: 4rem;
@@ -342,7 +350,11 @@ section p {
 }
 
 footer {
-  color: black;
+  height: 30vh;
+  background-color: #0D0D0D;
+  color: #D6C5A9;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */
