@@ -1,15 +1,40 @@
-label {
+@use "variables" as *;
+%properties {
     display: block;
     margin-bottom: 5px;
-    font-family: inherit;
     width: 100%;
     font-size: 1.6rem;
 }
+label{
+    @extend %properties;
+}
 
 input {
-    display: block;
-    margin-bottom: 5px;
+    @extend %properties;
     font-family: inherit;
-    width: 100%;
-    font-size: 1.6rem;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    outline: 0;
+
+    &:focus{
+        border-color: grey; 
+    }
+
+    &[type="submit"]{
+        margin-top: 30px;
+        color: $color4;
+        transition-duration: .3s;
+        background-color: $color5;
+        &:hover{
+            background-color: $color4;
+            color: $color5
+        }
+    }
+}
+
+textarea{
+    @extend input;
+    resize: none;
+    height: 150px;
 }
